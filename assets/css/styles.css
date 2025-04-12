@@ -2,17 +2,29 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Ensure padding and border are included in element width/height */
+    box-sizing: border-box;
+    /* Ensure padding and border are included in element width/height */
 }
 
 /* Style the body and set it up to fill the full height of the viewport */
-html, body {
-    height: 100%; /* Allows the footer to align properly at the bottom */
+html,
+body {
+    height: 100%;
+    /* Allows the footer to align properly at the bottom */
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
     color: #333;
-    display: flex; /* Enables flexible layout */
-    flex-direction: column; /* Stacks header, main content, and footer vertically */
+    display: flex;
+    /* Enables flexible layout */
+    flex-direction: column;
+    /* Stacks header, main content, and footer vertically */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #ffffff;
 }
 
 /* Header styling */
@@ -29,26 +41,34 @@ header {
 
 /* Styling for main headings */
 h1 {
-    color: white;
+    color: rgb(253, 123, 208);
     font-size: 2rem;
 }
 
 /* Navigation styling */
 nav ul {
-    list-style-type: none; /* Remove default list styles */
+    list-style-type: none;
+    /* Remove default list styles */
     text-align: center;
     margin: 20px 0;
 }
 
 nav ul li {
-    display: inline; /* Display links inline */
+    display: inline;
+    /* Display links inline */
     margin: 0 15px;
 }
 
 nav ul li a {
-    text-decoration: none; /* Remove underline from links */
+    text-decoration: none;
+    /* Remove underline from links */
     color: #4CAF50;
     font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff5733;
 }
 
 /* Form styling */
@@ -56,22 +76,28 @@ form {
     margin: 20px;
     padding: 20px;
     background-color: white;
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for form container */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for form container */
 }
 
 form label {
     font-size: 1.1rem;
     margin-bottom: 10px;
-    display: block; /* Makes the label appear above input fields */
+    display: block;
+    /* Makes the label appear above input fields */
 }
 
-form input, form textarea {
-    width: 100%; /* Full-width inputs */
+form input,
+form textarea {
+    width: 100%;
+    /* Full-width inputs */
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
-    border-radius: 5px; /* Rounded corners for input fields */
+    border-radius: 5px;
+    /* Rounded corners for input fields */
 }
 
 form button {
@@ -85,22 +111,54 @@ form button {
 }
 
 form button:hover {
-    background-color: #45a049; /* Slightly darker green on hover */
+    background-color: #45a049;
+    /* Slightly darker green on hover */
 }
 
 /* Main content to take up remaining space */
 main {
-    flex: 1; /* Fills available space between header and footer */
+    flex: 1;
+    /* Fills available space between header and footer */
     padding: 20px;
     text-align: center;
 }
 
 /* Footer styling */
 footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
+    background-color: #000;
     color: white;
-    width: 100%; /* Ensure it spans the full width */
-    /* Removed position: relative for dynamic height flexibility */
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: auto;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #00aaff;
+}
+
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    /*background: url('../images/hero-bg.jpg') no-repeat center;*/
+    background-size: cover;
+    color: rgb(2, 132, 47);
+    background-color: #ffffff;
+}
+
+#lottie-container {
+    width: 300px;
+    height: 300px;
+    margin: auto;
 }

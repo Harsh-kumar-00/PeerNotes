@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
-        <img src="assets/css/images/logo.png" alt="Logo" id="logo">
+        <img src="assets/images/logo.png" alt="Logo" id="logo">
         <h1>Login to your Account</h1>
     </header>
 
@@ -26,8 +28,17 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Study Material Sharing Platform</p>
+        <p>&copy;<span id="year"></span> Study Material Sharing Platform</p>
+        <div class="social-icons">
+            <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/harshkr2/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/harsh-kr-z/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
     </footer>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear(); // Update the year dynamically
+    </script>
 
     <script src="assets/css/js/scripts.js"></script>
 </body>
